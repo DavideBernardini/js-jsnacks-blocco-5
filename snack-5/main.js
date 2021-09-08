@@ -26,7 +26,7 @@ while ( arrNumeri.length < lunghezzaArrNumeri) {
 }
 
 var numeroB = Math.floor(Math.random() * arrNumeri.length) + 1;
-var numeroA = Math.floor(Math.random() * (numeroB - 1)) + 1;
+var numeroA = Math.floor(Math.random() * (numeroB - 2)) + 1;
 var arrNumeriCompresi = numbersBetween(arrNumeri, numeroA, numeroB);
 
 console.log(arrNumeri);
