@@ -4,15 +4,23 @@ es. [a,b,c], [1,2,3] → [a,1,b,2,c,3].*/
 
 function arraysAlternMerge(array1, array2) {
     var arrMerged = [];
-    for (var i = 0; i < array1.length; i++) {
-        arrMerged.push(array1[i]);
-        arrMerged.push(array2[i]);
+    if (array1.length == array2.length) {
+        for (let i = 0; i < array1.length; i++) {
+            arrMerged.push(array1[i]);
+            arrMerged.push(array2[i]);
+        }
+        return arrMerged;
+    } else {
+        return "Non è possibile fondere due array di diversa lunghezza con questa funzione."
     }
-    return arrMerged;
+    
+
 }
 
 var colori = ['rosso', 'verde', 'giallo', 'blu'];
-var frutta = ['fragole', 'mele', 'banane', 'mirtilli']
+
+var frutta = ['fragole', 'mele', 'banane', 'mirtilli'];
+
 var coloriFrutta = arraysAlternMerge(colori, frutta);
 console.log(colori);
 console.log(frutta);
